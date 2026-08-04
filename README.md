@@ -49,6 +49,7 @@ Plataforma web para modelagem e backtesting de Value at Risk (VaR) em ativos da 
 | [mecanimais](https://github.com/kakah1327/mecanimais) | Braço robótico LEGO EV3 com movimentação automatizada (Python) |
 | [Java-AP2](https://github.com/kakah1327/Java-AP2) | Projeto em grupo desenvolvido em Java |
 | [Calculadora](https://github.com/kakah1327/Calculadora) | Calculadora feita em JavaScript |
+| [Churn-Prediction](https://github.com/kakah1327/churn-prediction) | Pipeline de Machine Learning end-to-end feita em Python |
 
 ### 📊 Áreas de Foco
 - ✅ Dados & Analytics — extração, transformação e visualização de dados
