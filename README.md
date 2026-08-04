@@ -60,8 +60,5 @@ Plataforma web para modelagem e backtesting de Value at Risk (VaR) em ativos da 
 ### 🎯 Objetivo
 Desenvolver soluções inovadoras que combinem análise de dados, automação inteligente e conhecimento de negócio, contribuindo para a transformação digital em ambientes corporativos.
 
-### 📈 Estatísticas
-![Stats](https://github-readme-stats.vercel.app/api?username=kakah1327&show_icons=true&theme=tokyonight&hide_border=true) ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=kakah1327&layout=compact&theme=tokyonight&hide_border=true)
-
 ### 📫 Contato
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kaua-ribeiro/)
