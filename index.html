@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Processamento de Imagens e Visão Computacional</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <span class="logo">PI&nbsp;+&nbsp;VC</span>
+    <nav class="site-nav">
+      <a class="nav-link" href="#inicio">Início</a>
+      <a class="nav-link" href="#conceitos">Conceitos</a>
+      <a class="nav-link" href="#laboratorio">Laboratório</a>
+      <a class="nav-link" href="#referencia">Referência</a>
+      <a class="nav-link" href="#estudos">Guia de estudos</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section id="inicio" class="section hero">
+    <div class="container">
+      <h1>Processamento de Imagens e Visão Computacional</h1>
+      <p class="lead">
+        Site de apoio pra disciplina — feito porque o plano de ensino oficial não foi
+        divulgado. Reúne os conceitos mais comuns desse tipo de matéria e um
+        laboratório interativo pra visualizar, no navegador, o que os exercícios em
+        Python normalmente pedem: percorrer a imagem pixel a pixel e aplicar alguma
+        transformação.
+      </p>
+      <p class="note">
+        ⚠️ Como não há um plano de ensino oficial disponível, o conteúdo aqui é uma
+        base geral dos tópicos clássicos de Processamento de Imagens e introdução à
+        Visão Computacional — não substitui o material passado pelo professor.
+      </p>
+      <a class="cta" href="#laboratorio">Ir pro laboratório interativo →</a>
+    </div>
+  </section>
+
+  <section id="conceitos" class="section">
+    <div class="container">
+      <h2>Conceitos fundamentais</h2>
+
+      <div class="card-grid">
+        <article class="card">
+          <h3>Imagem como matriz de pixels</h3>
+          <p>
+            Uma imagem digital é uma matriz (uma "grade") de pixels. Cada pixel tem uma
+            posição <code>(x, y)</code> e um valor de cor. Em uma imagem <strong>RGB</strong>,
+            cada pixel guarda três valores — vermelho, verde e azul —, cada um variando
+            de 0 a 255. Em uma imagem em <strong>escala de cinza</strong>, cada pixel tem
+            um único valor de intensidade (0 = preto, 255 = branco).
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>"Percorrer" a imagem em Python</h3>
+          <p>
+            É basicamente um laço duplo: um <code>for</code> pra percorrer as linhas
+            (altura) e outro, dentro dele, pra percorrer as colunas (largura). Pra cada
+            posição <code>(x, y)</code>, você lê o valor do pixel, calcula um novo valor
+            e grava de volta — geralmente numa imagem nova, pra não estragar a original
+            enquanto ainda está lendo dela.
+          </p>
+          <pre><code>for y in range(altura):
+    for x in range(largura):
+        pixel = pixels[x, y]
+        # calcular e aplicar a transformação aqui</code></pre>
+        </article>
+
+        <article class="card">
+          <h3>Operações pontuais x operações de vizinhança</h3>
+          <p>
+            <strong>Pontuais:</strong> o novo valor do pixel depende só do valor
+            original dele (negativo, brilho, limiarização). <strong>De vizinhança:</strong>
+            o novo valor depende também dos pixels ao redor — é o caso da
+            <strong>convolução</strong>, usada em desfoque, nitidez e detecção de bordas.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Profundidade de bits</h3>
+          <p>
+            É a quantidade de bits usada pra representar cada valor de cor. 8 bits por
+            canal = 256 níveis possíveis (0–255), o padrão mais comum. Quanto mais bits,
+            mais tons diferentes a imagem consegue representar.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="laboratorio" class="section">
+    <div class="container">
+      <h2>Laboratório interativo</h2>
+      <p class="section-intro">
+        Suba uma imagem sua ou use a imagem de exemplo, escolha uma operação e veja o
+        resultado em tempo real — junto com o trecho de Python equivalente ao que está
+        acontecendo.
+      </p>
+
+      <div class="lab-toolbar">
+        <label class="file-label">
+          📁 Escolher imagem
+          <input type="file" id="fileInput" accept="image/*" hidden />
+        </label>
+        <button id="sampleButton" type="button">🖼️ Usar imagem de exemplo</button>
+      </div>
+
+      <div class="lab-grid">
+        <div class="canvas-box">
+          <h4>Original</h4>
+          <canvas id="canvasOriginal"></canvas>
+        </div>
+        <div class="canvas-box">
+          <h4>Resultado</h4>
+          <canvas id="canvasResult"></canvas>
+        </div>
+      </div>
+
+      <div class="lab-controls">
+        <label>
+          Operação
+          <select id="filterSelect">
+            <option value="original">Original (sem alteração)</option>
+            <optgroup label="Operações pontuais">
+              <option value="negativo">Negativo</option>
+              <option value="cinza-media">Escala de cinza (média)</option>
+              <option value="cinza-luminosidade">Escala de cinza (luminosidade)</option>
+              <option value="brilho-contraste">Brilho / contraste</option>
+              <option value="limiarizacao">Limiarização (binarização)</option>
+            </optgroup>
+            <optgroup label="Convolução / vizinhança">
+              <option value="blur">Desfoque (blur gaussiano)</option>
+              <option value="sharpen">Nitidez (sharpen)</option>
+              <option value="bordas-laplaciano">Detecção de bordas (Laplaciano)</option>
+              <option value="bordas-sobel">Detecção de bordas (Sobel)</option>
+              <option value="relevo">Relevo (emboss)</option>
+            </optgroup>
+            <optgroup label="Morfologia (visão computacional)">
+              <option value="erosao">Erosão</option>
+              <option value="dilatacao">Dilatação</option>
+            </optgroup>
+          </select>
+        </label>
+
+        <div class="control-group hidden" data-control="brightness">
+          <label>Brilho: <span id="brightnessValue">0</span></label>
+          <input type="range" id="brightnessSlider" min="-100" max="100" value="0" />
+        </div>
+
+        <div class="control-group hidden" data-control="contrast">
+          <label>Contraste: <span id="contrastValue">0</span></label>
+          <input type="range" id="contrastSlider" min="-100" max="100" value="0" />
+        </div>
+
+        <div class="control-group hidden" data-control="threshold">
+          <label>Limiar: <span id="thresholdValue">128</span></label>
+          <input type="range" id="thresholdSlider" min="0" max="255" value="128" />
+        </div>
+
+        <div class="control-group hidden" data-control="iterations">
+          <label>Iterações: <span id="iterationsValue">1</span></label>
+          <input type="range" id="iterationsSlider" min="1" max="5" value="1" />
+        </div>
+      </div>
+
+      <div class="lab-bottom">
+        <div class="histogram-box">
+          <h4>Histograma (intensidade do resultado)</h4>
+          <canvas id="canvasHistogram" width="420" height="120"></canvas>
+        </div>
+        <div class="code-box">
+          <h4>Python equivalente</h4>
+          <pre><code id="codeBlock"></code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="referencia" class="section">
+    <div class="container">
+      <h2>Referência rápida</h2>
+
+      <h3>Fórmulas de operações pontuais</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Operação</th><th>Fórmula</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Negativo</td><td><code>novo = 255 - original</code></td></tr>
+            <tr><td>Cinza (média)</td><td><code>cinza = (R + G + B) / 3</code></td></tr>
+            <tr><td>Cinza (luminosidade)</td><td><code>cinza = 0.299·R + 0.587·G + 0.114·B</code></td></tr>
+            <tr><td>Brilho</td><td><code>novo = original + valor</code></td></tr>
+            <tr><td>Limiarização</td><td><code>novo = 255 se cinza ≥ limiar, senão 0</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Kernels de convolução 3×3 comuns</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Kernel</th><th>Matriz</th><th>Divisor</th><th>Efeito</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Desfoque (gaussiano)</td>
+              <td><code>[1,2,1 / 2,4,2 / 1,2,1]</code></td>
+              <td>16</td>
+              <td>Suaviza, reduz ruído</td>
+            </tr>
+            <tr>
+              <td>Nitidez</td>
+              <td><code>[0,-1,0 / -1,5,-1 / 0,-1,0]</code></td>
+              <td>1</td>
+              <td>Realça detalhes/bordas</td>
+            </tr>
+            <tr>
+              <td>Bordas (Laplaciano)</td>
+              <td><code>[0,-1,0 / -1,4,-1 / 0,-1,0]</code></td>
+              <td>1</td>
+              <td>Realça variações bruscas</td>
+            </tr>
+            <tr>
+              <td>Relevo (emboss)</td>
+              <td><code>[-2,-1,0 / -1,1,1 / 0,1,2]</code></td>
+              <td>1</td>
+              <td>Efeito 3D de relevo</td>
+            </tr>
+            <tr>
+              <td>Sobel (Gx)</td>
+              <td><code>[-1,0,1 / -2,0,2 / -1,0,1]</code></td>
+              <td>—</td>
+              <td>Gradiente horizontal</td>
+            </tr>
+            <tr>
+              <td>Sobel (Gy)</td>
+              <td><code>[-1,-2,-1 / 0,0,0 / 1,2,1]</code></td>
+              <td>—</td>
+              <td>Gradiente vertical</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Morfologia binária</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Operação</th><th>Regra (vizinhança 3×3)</th><th>Efeito</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Erosão</td><td>pixel = mínimo da vizinhança</td><td>encolhe regiões brancas</td></tr>
+            <tr><td>Dilatação</td><td>pixel = máximo da vizinhança</td><td>expande regiões brancas</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="estudos" class="section">
+    <div class="container">
+      <h2>Guia de estudos</h2>
+      <p class="section-intro">
+        Lista organizada dos tópicos mais prováveis numa disciplina introdutória de
+        Processamento de Imagens e Visão Computacional. Use como checklist de revisão —
+        de novo, é uma base geral, não o conteúdo oficial do professor.
+      </p>
+
+      <div class="study-grid">
+        <div class="study-card">
+          <h3>Processamento de imagens</h3>
+          <ul>
+            <li>Representação de imagem: matriz de pixels, RGB, escala de cinza</li>
+            <li>Diferença entre operação pontual e operação de vizinhança</li>
+            <li>Negativo, ajuste de brilho e contraste</li>
+            <li>Conversão para escala de cinza (média x luminosidade)</li>
+            <li>Histograma: o que representa e pra que serve</li>
+            <li>Limiarização / binarização de imagens</li>
+            <li>Convolução: como funciona um kernel, o que é o divisor</li>
+            <li>Filtros de suavização (blur) e nitidez (sharpen)</li>
+          </ul>
+        </div>
+
+        <div class="study-card">
+          <h3>Introdução à visão computacional</h3>
+          <ul>
+            <li>Detecção de bordas: Laplaciano x Sobel, o que é gradiente</li>
+            <li>Morfologia matemática: erosão e dilatação em imagens binárias</li>
+            <li>Segmentação básica de imagem (separar objeto do fundo)</li>
+            <li>Ideia geral de extração de características (o que torna um objeto identificável)</li>
+            <li>Diferença entre processamento de imagem e visão computacional</li>
+          </ul>
+        </div>
+
+        <div class="study-card">
+          <h3>Prática em Python</h3>
+          <ul>
+            <li>Abrir e salvar imagens (ex: biblioteca <code>Pillow</code>/<code>PIL</code>)</li>
+            <li>Acessar e alterar pixels individuais (<code>load()</code>, <code>putpixel</code>)</li>
+            <li>Percorrer a imagem com laços duplos (linhas × colunas)</li>
+            <li>Criar uma imagem nova em vez de alterar a original durante o laço</li>
+            <li>Implementar convolução "na mão" com laços aninhados</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Material de apoio criado sem plano de ensino oficial — sempre confira com o professor.</p>
+  </div>
+</footer>
+
+<script src="js/filters.js"></script>
+<script src="js/histogram.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
