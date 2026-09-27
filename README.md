@@ -2,7 +2,7 @@
 
 ![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&color=2E9EF7&center=true&vCenter=true&width=700&lines=Estudante+de+Ciencia+da+Computacao;Estagiario+em+Dados+%26+CX+na+Vivo;Dados+%7C+Automacao+%7C+IA)
 
-![Ciência da Computação](https://img.shields.io/badge/Ci%C3%AAncia%20da%20Computa%C3%A7%C3%A3o-2E9EF7?style=flat-square) ![Vivo](https://img.shields.io/badge/Vivo%Dados%20%26%20CX-660099?style=flat-square) ![Azure](https://img.shields.io/badge/Azure-AI--900-0089D6?style=flat-square&logo=microsoftazure&logoColor=white)
+![Ciência da Computação](https://img.shields.io/badge/Ci%C3%AAncia%20da%20Computa%C3%A7%C3%A3o-2E9EF7?style=flat-square) ![Vivo](https://img.shields.io/badge/Vivo%Dados%20%20CX-660099?style=flat-square) ![Azure](https://img.shields.io/badge/Azure-AI--900-0089D6?style=flat-square&logo=microsoftazure&logoColor=white)
 
 ### 🎓 Quem sou
 Estudante de Ciência da Computação na Faculdade Impacta Tecnologia, em São Paulo. Atualmente estagiário na Vivo Telefônica, na área de Dados e Customer Experience (CX), atuando na automação de processos e no desenvolvimento de soluções analíticas.
