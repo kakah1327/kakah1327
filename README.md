@@ -1,65 +1,128 @@
 # Olá, eu sou o Kauã 👋
 
-![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&color=2E9EF7&center=true&vCenter=true&width=700&lines=Estudante+de+Ciencia+da+Computacao;Estagiario+em+Dados+%26+CX+na+Vivo;Dados+%7C+Automacao+%7C+IA)
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&color=2E9EF7&center=true&vCenter=true&width=700&lines=Ci%C3%AAncia+da+Computa%C3%A7%C3%A3o;Dados+%7C+Automa%C3%A7%C3%A3o+%7C+IA;Python+%7C+SQL+%7C+Power+Platform;Construindo+solu%C3%A7%C3%B5es+baseadas+em+dados" />
+</p>
 
-![Ciência da Computação](https://img.shields.io/badge/Ci%C3%AAncia%20da%20Computa%C3%A7%C3%A3o-2E9EF7?style=flat-square) ![Vivo](https://img.shields.io/badge/Vivo%Dados%20%20CX-660099?style=flat-square) ![Azure](https://img.shields.io/badge/Azure-AI--900-0089D6?style=flat-square&logo=microsoftazure&logoColor=white)
+<p align="center">
+  <img src="https://img.shields.io/badge/Ciência_da_Computação-2E9EF7?style=flat-square" />
+  <img src="https://img.shields.io/badge/Dados_%26_CX-660099?style=flat-square" />
+  <img src="https://img.shields.io/badge/Azure_AI--900-0089D6?style=flat-square&logo=microsoftazure&logoColor=white" />
+</p>
 
-### 🎓 Quem sou
-Estudante de Ciência da Computação na Faculdade Impacta Tecnologia, em São Paulo. Atualmente estagiário na Vivo Telefônica, na área de Dados e Customer Experience (CX), atuando na automação de processos e no desenvolvimento de soluções analíticas.
+## 👨‍💻 Sobre mim
 
-### 💼 Experiência Profissional
+Estudante de **Ciência da Computação** na Faculdade Impacta Tecnologia, com atuação em **Dados, Automação e Customer Experience**.
 
-**Vivo Telefônica | Estágio em Dados & CX**
-- Desenvolvimento de automações corporativas com Power Automate e Power Apps
-- Criação de dashboards e relatórios analíticos com Power BI
-- Implementação de agentes inteligentes no Copilot Studio
-- Integração com SharePoint e bancos de dados corporativos
+Atualmente trabalho com desenvolvimento de soluções voltadas à automação de processos, análise de dados e aplicações corporativas.
 
-**Mondelez Internacional | Internship (HSE)**
-- Área de Saúde, Segurança e Meio Ambiente
+- 🐍 Python para automação, dados e aplicações
+- 🗄️ SQL e bancos de dados relacionais/NoSQL
+- 📊 Power BI para análise e visualização de dados
+- ⚡ Power Apps e Power Automate para automação corporativa
+- 🤖 IA aplicada a agentes e automações
+- 📈 Interesse em mercado financeiro e análise quantitativa
 
-**Quatá Alimentos | Apprenticeship**
-- Experiência inicial em contexto corporativo
+---
 
-### 🛠️ Stack Técnico
+## 🛠️ Tecnologias
 
-**Linguagens & Bancos de Dados**
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white) ![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+### Dados & Desenvolvimento
 
-**BI & Automação**
-![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black) ![Power Apps](https://img.shields.io/badge/Power%20Apps-742774?style=for-the-badge&logo=powerapps&logoColor=white) ![Power Automate](https://img.shields.io/badge/Power%20Automate-0066FF?style=for-the-badge&logo=powerautomate&logoColor=white)
+<p>
+  <img src="https://skillicons.dev/icons?i=python,postgres,mongodb,js,react,nextjs,git,github" />
+</p>
 
-- Copilot Studio (agentes inteligentes)
-- SharePoint (integração e colaboração)
-- Git & GitHub
+### Microsoft & Analytics
 
-**Certificações:** Azure AI-900 ✅
+<p>
+  <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" />
+  <img src="https://img.shields.io/badge/Power_Apps-742774?style=for-the-badge&logo=powerapps&logoColor=white" />
+  <img src="https://img.shields.io/badge/Power_Automate-0066FF?style=for-the-badge&logo=powerautomate&logoColor=white" />
+  <img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white" />
+</p>
 
-### 📚 Projeto Acadêmico
+**Também trabalho com:** SQL • Oracle • SharePoint • Copilot Studio
 
-**VaR Lab | Trabalho de Conclusão de Curso (TCC)**
-Plataforma web para modelagem e backtesting de Value at Risk (VaR) em ativos da B3 (Bolsa de Valores Brasileira).
-- Tecnologias: Python, análise quantitativa, mercados financeiros
-- Colaboradores: Cintia, Guilherme, Lucas
-- Orientador: Prof. Dr. Gilberto Perez
+---
 
-### 🚀 Repositórios em destaque
-| Projeto | Descrição |
-|---|---|
-| [mecanimais](https://github.com/kakah1327/mecanimais) | Braço robótico LEGO EV3 com movimentação automatizada (Python) |
-| [Java-AP2](https://github.com/kakah1327/Java-AP2) | Projeto em grupo desenvolvido em Java |
-| [Calculadora](https://github.com/kakah1327/Calculadora) | Calculadora feita em JavaScript |
-| [Churn-Prediction](https://github.com/kakah1327/churn-prediction) | Pipeline de Machine Learning end-to-end feita em Python |
+## 🚀 Projetos em destaque
 
-### 📊 Áreas de Foco
-- ✅ Dados & Analytics — extração, transformação e visualização de dados
-- ✅ Automação Corporativa — processos end-to-end com Power Platform
-- ✅ Desenvolvimento de Soluções — aplicações web e dashboards
-- ✅ Mercados Financeiros — interesse em análise quantitativa e investimentos brasileiros
-- ✅ IA & Automação Inteligente — agentes e processos autônomos
+### 📊 VaR Lab
 
-### 🎯 Objetivo
-Desenvolver soluções inovadoras que combinem análise de dados, automação inteligente e conhecimento de negócio, contribuindo para a transformação digital em ambientes corporativos.
+**Plataforma de análise quantitativa e backtesting de Value at Risk para ativos da B3.**
 
-### 📫 Contato
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kaua-ribeiro/)
+Projeto desenvolvido como Trabalho de Conclusão de Curso, envolvendo coleta e tratamento de dados financeiros, modelagem de risco e avaliação estatística dos modelos.
+
+`Python` `Flask` `React` `PostgreSQL` `Análise Quantitativa`
+
+---
+
+### 🤖 Churn Prediction
+
+Pipeline de Machine Learning para previsão de churn, passando pelas etapas de preparação dos dados, treinamento e avaliação do modelo.
+
+[🔗 Ver repositório](https://github.com/kakah1327/churn-prediction)
+
+`Python` `Machine Learning` `Data Science`
+
+---
+
+### 🦾 Mecanimais
+
+Projeto de automação utilizando **LEGO EV3**, com controle de movimentação e programação em Python.
+
+[🔗 Ver repositório](https://github.com/kakah1327/mecanimais)
+
+`Python` `LEGO EV3` `Automação`
+
+---
+
+## 💼 Experiência
+
+### Vivo Telefônica
+**Estágio — Dados & Customer Experience**
+
+- Desenvolvimento de automações corporativas
+- Dashboards e análises com Power BI
+- Soluções utilizando Power Apps e Power Automate
+- Integrações com SharePoint e bancos de dados
+- Desenvolvimento de agentes com Copilot Studio
+
+### Mondelez International
+**Internship — HSE**
+
+Experiência em ambiente corporativo na área de Saúde, Segurança e Meio Ambiente.
+
+### Quatá Alimentos
+**Apprenticeship**
+
+Primeira experiência profissional em ambiente corporativo.
+
+---
+
+## 🎓 Formação & Certificações
+
+🎓 **Ciência da Computação**  
+Faculdade Impacta Tecnologia
+
+☁️ **Microsoft Azure AI Fundamentals — AI-900**
+
+---
+
+## 📊 GitHub
+
+<p align="center">
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=kakah1327&show_icons=true&theme=github_dark&hide_border=true" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kakah1327&layout=compact&theme=github_dark&hide_border=true" />
+</p>
+
+---
+
+## 📫 Contato
+
+<p>
+  <a href="https://www.linkedin.com/in/kaua-ribeiro/">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+</p>
